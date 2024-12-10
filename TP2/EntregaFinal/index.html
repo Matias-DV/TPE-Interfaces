@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <title>BMO-Games</title>
+    <link rel="shortcut icon" href="img/Iconos/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div id="pantalladecarga">
+        <img src="img/Iconos/bmo.png" alt="Imagen pantalla de carga" class="imagenpantalladecarga">
+        <div id="barradeprogreso">
+            <div id="progreso"><img src="img/Iconos/Jake.png" alt="Imagen del Progreso"></div>
+        </div>
+        <p id="porcentajedeprogreso">0%</p>
+    </div>
+    <nav>
+        <button id="btn-menuHamburguesa">
+            <img src="img/Iconos/menuHamburguesa.png" alt="Menu hamburguesa">
+        </button>
+        <img class="icono" src="img/Iconos/bmo.png" alt="icono de la pagina">
+        <form>
+            <input type="text" id="search" placeholder="Buscar...">
+            <label for="search"><img src="img/Iconos/lupa.png" alt="Lupa de Busqueda"></label>
+        </form>
+        <div class="nav-botones">
+            <button id="btn-menuCarrito">
+                <img src="img/Iconos/carrito.png" alt="Icono de carrito">
+            </button>
+            <button id="btn-menuUsuario" class="nav-avatar">
+                <img src="img/Iconos/fotoperfil.png" alt="Foto de perfil">
+            </button>
+        </div>
+        <div id="menuHamburguesa" class="menu-hamburguesa menu-oculto">
+            <div>
+                <img src="img/Iconos/Juegos.png" alt="Mis juegos">
+                <h1>Mis Juegos</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Aventuras.png" alt="Acción y Aventuras">
+                <h1>Acción y Aventuras</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Carreras.png" alt="Carreras">
+                <h1>Carreras</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Deportes.png" alt="Deportes">
+                <h1>Deportes</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Multijugador.png" alt="Multijugador">
+                <h1>Multijugador</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Puzzles.png" alt="Puzzles">
+                <h1>Puzzles</h1>
+            </div>
+        </div>
+        <div id="menuCarrito" class="menu-carrito menu-oculto">
+            <h1>Mi Carrito</h1>
+            <div>
+                <h3>Assassin’s Creed Shadows</h3>
+                <p>19,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>EA FC 25</h3>
+                <p>49,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>Tour de France 2024</h3>
+                <p>45,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>Overwatch 2</h3>
+                <p>30,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>Minecraft</h3>
+                <p>0,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>It Takes Two</h3>
+                <p>20,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <form>
+                <h3>Total a pagar</h3>
+                <p>168,94 USD</p>
+                <button class="agregarCarrito">
+                    <h3>Pagar</h3>
+                </button>
+            </form>
+        </div>
+        <div id="menuUsuario" class="menu-usuario menu-oculto">
+            <div>
+                <img src="img/Iconos/fotoperfil.png" alt="Foto de Perfil">
+                <h2>Mi Perfil</h2>
+            </div>
+            <div>
+                <img src="img/Iconos/Credit card.png" alt="Mis métodos de pago">
+                <h2>Mis métodos de pago</h2>
+            </div>
+            <div>
+                <img src="img/Iconos/Multijugador.png" alt="Amigos">
+                <h2>Amigos</h2>
+            </div>
+            <a href="registrarse.html">
+                <div>
+                    <img src="img/Iconos/Cerrar Sesión.png" alt="Cerrar Sesión">
+                    <h2>Cerrar Sesión</h2>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="titulo-Recomendados">Juegos Recomendados del dia</h1>
+        <header>
+            <button id="flechaIzquierda"><img src="img/Iconos/iconoflechaizquierda.png" alt="Flecha para ir a la card anterior"></button>
+            <section class="carrusel_principal">
+                <figure class="card-principal">
+                    <img class="img_card_principal" src="img/Cards/imagenprincipal.jpg"
+                        alt="Miniatura del juego Hora de Aventura 4 en linea">
+                    <figcaption>
+                        <h2>Hora de Aventura 4 en Linea</h2>
+                        <h3>Puzzles</h3>
+                        <aside>
+                            <img src="img/Gameplay/HoraDeAventura1.png" alt="Miniatura de un gameplay del juego">
+                            <img src="img/Gameplay/HoraDeAventura2.png" alt="Miniatura de un gameplay del juego">
+                            <img src="img/Gameplay/HoraDeAventura3.png" alt="Miniatura de un gameplay del juego">
+                            <img src="img/Gameplay/HoraDeAventura4.png" alt="Miniatura de un gameplay del juego">
+                        </aside>
+                        <div>
+                            <p class="gratis">Gratis</p>
+                            <a href="juego.html">
+                                <button class="jugar jugarPrincipal">
+                                    <img class="jugar-imagen" src="img/Iconos/jugar.png" alt="Boton jugar">
+                                    <img class="hover" src="img/Iconos/JakeConFondo.png">
+                                </button>
+                            </a>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="card-principal absolute">
+                    <img class="img_card_principal" src="img/Cards/warframe.png"
+                        alt="Miniatura del juego Hora de Aventura 4 en linea">
+                    <figcaption>
+                        <h2>Warframe</h2>
+                        <h3>Multijugador</h3>
+                        <aside>
+                            <img src="img/Gameplay/Warframe1.png" alt="Miniatura de un gameplay del juego">
+                            <img src="img/Gameplay/Warframe2.png" alt="Miniatura de un gameplay del juego">
+                            <img src="img/Gameplay/Warframe3.png" alt="Miniatura de un gameplay del juego">
+                            <img src="img/Gameplay/Warframe4.png" alt="Miniatura de un gameplay del juego">
+                        </aside>
+                        <div>
+                            <p class="gratis">Gratis</p>
+                            <button class="jugar jugarPrincipal">
+                                <img class="jugar-imagen" src="img/Iconos/jugar.png" alt="Boton jugar">
+                                <img class="hover" src="img/Iconos/JakeConFondo.png">
+                            </button>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+            <button id="flechaDerecha"><img src="img/Iconos/iconoflechaderecha.png" alt="Flecha para ir a la card siguiente"></button>
+        </header>
+
+        <section class="carruseles_categorias">
+            <h1>Aventura</h1>
+            <article>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Assassin's Creed Shadows es un juego de acción sigilosa ambientado en un mundo abierto. Los jugadores controlan asesinos mientras exploran ciudades, ejecutan misiones secretas y enfrentan conspiraciones históricas intrigantes.
+                    </div>
+                    <img class="img_card" src="img/Cards/assassinscreedshadow.png" alt="Assassin's Creed Shadows">
+                    <figcaption>
+                        <h2>Assassin's Creed Shadows</h2>
+                        <div>
+                            <h3>$17,99 USD</h3>
+                            <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png"
+                                    alt="Icono quitar del carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Peter Parker y Miles Morales regresan en una nueva aventura de Marvel's Spider-Man, donde
+                            podrás balancearte por Nueva York, usar alas de telaraña y alternar entre ambos héroes.
+                            Enfréntate a Venom, que amenaza con destruir la ciudad y sus vidas.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/spiderman2.png" alt="Spiderman 2">
+                    <figcaption>
+                        <h2>Spider-Man 2</h2>
+                        <div>
+                            <h3>Gratis</h3>
+                            <button class="jugar">
+                                <img class="jugar-imagen" src="img/Iconos/jugar.png" alt="Boton jugar">
+                                <img class="hover" src="img/Iconos/JakeConFondo.png">
+                            </button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Tres años después del juego anterior, Kratos y Atreus buscan evitar el Ragnarök mientras
+                            exploran los nueve reinos y descubren la verdadera identidad de Atreus como Loki.
+                            Enfrentarán a Thor, Odín y Freya, quienes buscan venganza por la muerte de Baldur.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/gowr.png" alt="God of War Ragnarok">
+                    <figcaption>
+                        <h2>God of War Ragnarok</h2>
+                        <div>
+                            <h3>$3,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>The Last of Us: Parte II es un videojuego de drama, survival horror y acción-aventura en
+                            tercera persona, desarrollado por Naughty Dog y publicado por Sony. Escrita y dirigida por
+                            Neil Druckmann, esta secuela cuenta con la coescritura de Halley Gross.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/thelastofus.png" alt="The last of us II">
+                    <figcaption>
+                        <h2>The Last of Us Part II</h2>
+                        <div>
+                            <h3>$14,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Adéntrate en el DIRECTOR'S CUT de Ghost of Tsushima para PC y forja tu camino en esta
+                            aventura de acción en mundo abierto. Desarrollado por Sucker Punch Productions, Nixxes
+                            Software y PlayStation Studios.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/got.png" alt="Ghost of Tsushima">
+                    <figcaption>
+                        <h2>Ghost of Tsushima</h2>
+                        <div>
+                            <h3>$12,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Adéntrate en un elegante juego de plataformas repleto de acción y aventura. Viaja por la
+                            mitología persa y manipula los límites del espacio y el tiempo.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/princepersia.png" alt="PrinceOP">
+                    <figcaption>
+                        <h2>Prince of Persia</h2>
+                        <div>
+                            <h3>$0,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <h1>Carreras</h1>
+            <article>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Suéltate en DIRT 5: la experiencia todoterreno más audaz de todos los tiempos, con un modo
+                            Carrera plagado de estrellas, pantalla dividida para cuatro jugadores, innovadores modos en
+                            línea, editor de diseños distintivos y mucho más.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/dirt5.png" alt="Dirt5">
+                    <figcaption>
+                        <h2>Dirt 5</h2>
+                        <div>
+                            <h3>$5,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Adéntrate en el mundo de los deportes de motor norteamericanos mientras exploras todo Estados
+                            Unidos por tierra, mar y aire. Ponte al mando de una amplia variedad de coches, motos,
+                            barcos y avionetas, y compite en todo tipo de disciplinas.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/thecrew.png" alt="TheCrew">
+                    <figcaption>
+                        <h2>The Crew</h2>
+                        <div>
+                            <h3>$9,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>DiRT Rally 2.0 te reta a abrirte camino a través de una selección de ubicaciones de rally
+                            icónicas por todo el mundo, en los vehículos todoterreno más potentes de la historia,
+                            teniendo en cuenta que el menor de los fallos puede poner fin a tu carrera.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/dirt.png" alt="Dirt 2.0">
+                    <figcaption>
+                        <h2>Dirt Rally 2.0</h2>
+                        <div>
+                            <h3>$3,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>F1 2015 es un simulador de carreras que recrea la temporada oficial de Fórmula 1. Con gráficos realistas y físicas detalladas, los jugadores compiten en los circuitos más icónicos con pilotos y equipos auténticos.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/f2015.png" alt="F12015">
+                    <figcaption>
+                        <h2>F1 2015</h2>
+                        <div>
+                            <h3>Gratis</h3>
+                            <button class="jugar">
+                                <img class="jugar-imagen" src="img/Iconos/jugar.png" alt="Boton jugar">
+                                <img class="hover" src="img/Iconos/JakeConFondo.png">
+                            </button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Hazte con la experiencia completa de Need for Speed Rivals. Consigue el juego completo,
+                            además de los seis packs de contenido descargable, con la Complete Edition..</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/nfs.png" alt="NFSR">
+                    <figcaption>
+                        <h2>Need for Speed Rivals</h2>
+                        <div>
+                            <h3>$12,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Experimenta la conducción de tu vida mientras te lanzas dentro y fuera de la pista, haciendo
+                            que las vallas se destrocen, los muros de neumáticos exploten y los tanques de agua y
+                            barriles salgan volando por la pista chocando contra otros coches.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/flatout.png" alt="Flatout">
+                    <figcaption>
+                        <h2>Flatout</h2>
+                        <div>
+                            <h3>$0,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <aside class="banner">
+            <img src="img/banner.png" alt="Banner sobre el lanzamiento de Hora de Aventura 4 en linea">
+            <a href="juego.html">
+                <button class="jugarBanner">
+                    <h3>Jugar</h3>
+                    <div class="hover">
+                        <img  src="img/Iconos/BMOCara.png">
+                    </div>
+                </button>
+            </a>
+        </aside>
+
+        <section class="carruseles_categorias">
+            <h1>Multijugador</h1>
+            <article>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Despierta como un guerrero imparable y lucha junto a tus amigos en este juego de acción
+                            gratuito en línea y basado en historias.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/warframe.png" alt="Warframe">
+                    <figcaption>
+                        <h2>Warframe</h2>
+                        <div>
+                            <h3>Gratis</h3>
+                            <button class="jugar">
+                                <img class="jugar-imagen" src="img/Iconos/jugar.png" alt="Boton jugar">
+                                <img class="hover" src="img/Iconos/JakeConFondo.png">
+                            </button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>World of Warcraft es un juego online en el que los jugadores crean un personaje y exploran un
+                            mundo virtual lleno de misiones, aventuras y desafíos. Los jugadores pueden formar grupos
+                            para completar misiones juntos y enfrentarse a jefes poderosos.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/wow.png" alt="WOW">
+                    <figcaption>
+                        <h2>World of Warcraft</h2>
+                        <div>
+                            <h3>Gratis</h3>
+                            <button class="jugar">
+                                <img class="jugar-imagen" src="img/Iconos/jugar.png" alt="Boton jugar">
+                                <img class="hover" src="img/Iconos/JakeConFondo.png">
+                            </button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Overwatch® 2 es un shooter por equipos aclamado por la crítica ambientado en un futuro
+                            optimista con un plantel de héroes en evolución. Júntate con amigos y jugad hoy mismo.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/overwatch2.png" alt="Overwatch 2">
+                    <figcaption>
+                        <h2>Overwatch 2</h2>
+                        <div>
+                            <h3>$30,99 USD</h3>
+                            <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png"
+                                    alt="Icono quitar del carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Minecraft es un videojuego sandbox enfocado en permitirle al jugador explorar y modificar un
+                            mundo generado dinámicamente hecho de bloques de un metro cúbico. Es mantenido por Mojang
+                            Studios, que forma parte de Xbox Game Studios, que a su vez es parte de Microsoft. </p>
+                    </div>
+                    <img class="img_card" src="img/Cards/minecraft.png" alt="Minecraft">
+                    <figcaption>
+                        <h2>Minecraft</h2>
+                        <div>
+                            <h3>$0,99 USD</h3>
+                            <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png"
+                                    alt="Icono quitar del carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Tom Clancy's Rainbow Six® Siege es un shooter táctico realista por equipos donde una
+                            cuidadosa planificación y ejecución son claves para la victoria.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/rainbow.png" alt="Tom Clancy&#39;s Rainbow Six: Siege">
+                    <figcaption>
+                        <h2>Tom Clancy&#39;s Rainbow Six: Siege</h2>
+                        <div>
+                            <h3>$38,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Fortnite es un mundo lleno de experiencias. Lánzate a la isla y compite hasta ser el último
+                            jugador (o equipo) en pie. Crea una isla personalizada con tus propias reglas. Reúnete con
+                            tus amigos en una isla creada por alguno de tus compañeros. O enfréntate a hordas de
+                            monstruos junto a otros jugadores para salvar el mundo.</p>
+                    </div>
+                    <img class="img_card" src="img/Cards/fornite.png" alt="Fornite">
+                    <figcaption>
+                        <h2>Fornite</h2>
+                        <div>
+                            <h3>Gratis</h3>
+                            <button class="jugar">
+                                <img class="jugar-imagen" src="img/Iconos/jugar.png" alt="Boton jugar">
+                                <img class="hover" src="img/Iconos/JakeConFondo.png">
+                            </button>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <h1>Puzzles</h1>
+            <article>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>¡Prepárate para conectar 4 como un verdadero héroe! Para ganar, solo tienes que alinear
+                            cuatro fichas del mismo color, ya sea en horizontal, vertical o diagonal.</p>
+                    </div>
+                    <img src="img/Cards/4linea.png" alt="4 en linea">
+                    <figcaption>
+                        <h2>Hora de aventura 4 en línea</h2>
+                        <div>
+                            <h3>Gratis</h3>
+                            <a href="juego.html">
+                                <button class="jugar">
+                                    <img class="jugar-imagen" src="img/Iconos/jugar.png" alt="Boton jugar">
+                                    <img class="hover" src="img/Iconos/JakeConFondo.png">
+                                </button>
+                            </a>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Embárcate en la aventura de tu vida en It Takes Two. Invita a un amigo a acompañarte gratis
+                            con el Pase de amigo* para colaborar en una gran variedad de desafíos deliciosamente
+                            rompedores.</p>
+                    </div>
+                    <img src="img/Cards/ittakestwo.png" alt="It Takes Two">
+                    <figcaption>
+                        <h2>It Takes Two</h2>
+                        <div>
+                            <h3>$20,99 USD</h3>
+                            <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png"
+                                    alt="Icono quitar del carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>¡Acompaña a Bred y Fred! Un rage game donde tendrás que cooperar para saltar y escalar hasta
+                            el pico de la montaña. Eso si, tendrás que tener mucho cuidado de no caer, y no arrastrar a
+                            tu compañero pingüino camino abajo... ¿Podrás superar junto a un amigo la ruta hasta arriba?
+                        </p>
+                    </div>
+                    <img src="img/Cards/breadafred.png" alt="">
+                    <figcaption>
+                        <h2>Bred &amp; Fred</h2>
+                        <div>
+                            <h3>$14,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>Un juego de enigmas en primera persona al que puedes jugar en solitario o cooperativamente en
+                            línea. Descubre un conjunto de salas de escape totalmente interactivas. ¡Traslada muebles,
+                            recoge y examínalo todo, rompe vasijas y destruye candados! Este juego es compatible con
+                            salas comunitarias.</p>
+                    </div>
+                    <img src="img/Cards/escapesimulator.png" alt="Escape Simulator">
+                    <figcaption>
+                        <h2>Escape Simulator</h2>
+                        <div>
+                            <h3>$3,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>CATO: Buttered Cat es un adorable juego de plataformas inspirado en la paradoja del gato con
+                            tostada, donde al atar una tostada con mantequilla a un gato, ¡creas una máquina de
+                            movimiento perpetuo que gira y flota!</p>
+                    </div>
+                    <img src="img/Cards/cato.png" alt="Cato">
+                    <figcaption>
+                        <h2>Cato</h2>
+                        <div>
+                            <h3>$19,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="descripcion">
+                        <p>Descripcion:</p>
+                        <p>A Webbing Journey es un juego sandbox con interacciones de física en el que encarnas a una
+                            adorable arañita. Explora una casa gigantesca, diseña telarañas espectaculares y completa
+                            tareas desproporcionadas con mucha imaginación.</p>
+                    </div>
+                    <img src="img/Cards/webbingjourney.png" alt="A Webbing Journey">
+                    <figcaption>
+                        <h2>A Webbing Journey</h2>
+                        <div>
+                            <h3>0,99 USD</h3>
+                            <button class="agregarCarrito"><img src="img/Iconos/agregarcarrito.png"
+                                    alt="Icono agregar al carrito"></button>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <img src="img/Iconos/bmo.png" alt="Logo Footer">
+        <ul>Desarrolladores
+            <li>Coppini Lautaro</li>
+            <li>Del Valle Matias Ezequiel</li>
+            <li>Ferreiro Zunino Lucas</li>
+        </ul>
+
+        <ul>Categorias
+            <li>Acción y Aventura</li>
+            <li>Carreras</li>
+            <li>Deportes</li>
+            <li>Multijugador</li>
+            <li>Puzzles</li>
+        </ul>
+
+        <ul>Promociones y Ofertas
+            <li>Ofertas del día</li>
+            <li>Cupones y descuentos</li>
+            <li>Sorteos y concursos</li>
+            <li>Packs y bundles de juegos</li>
+        </ul>
+
+        <ul>Soporte
+            <li>Centro de Ayuda</li>
+            <li>FAQs</li>
+            <li>Reportar un problema</li>
+        </ul>
+
+        <ul>Legal y Politicas
+            <li>Condiciones de uso</li>
+            <li>Políticas de Cookies</li>
+            <li>Políticas de privacidad</li>
+            <li>Políticas de reembolso</li>
+            <li>Términos de servicios</li>
+        </ul>
+
+        <ul class="redes">Redes Sociales
+            <div>
+                <li><a href=""><img src="img/Iconos/x.png" alt="Icono de X"></a></li>
+                <li><a href=""><img src="img/Iconos/linkedin.png" alt="Icono de Linkedin"></a></li>
+                <li><a href=""><img src="img/Iconos/instagram.png" alt="Icono de Instagram"></a></li>
+                <li><a href=""><img src="img/Iconos/gmail.png" alt="Icono de Gmail"></a></li>
+            </div>
+        </ul>
+        <p class="derechosRegistrados">© 2024 BMO Games. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/loading.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/carrusel.js"></script>
+</body>
+
+</html>

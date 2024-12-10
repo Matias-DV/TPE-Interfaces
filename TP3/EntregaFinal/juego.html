@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <title>BMO-Games|Hora de Aventura 4 en linea</title>
+    <link rel="shortcut icon" href="img/Iconos/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <button id="btn-menuHamburguesa">
+            <img src="img/Iconos/menuHamburguesa.png" alt="Menu hamburguesa">
+        </button>
+        <a href="index.html"><img class="icono" src="img/Iconos/bmo.png" alt="icono de la pagina"></a>
+        <form>
+            <input type="text" id="search" placeholder="Buscar...">
+            <label for="search"><img src="img/Iconos/lupa.png" alt="Lupa de Busqueda"></label>
+        </form>
+        <div class="nav-botones">
+            <button id="btn-menuCarrito">
+                <img src="img/Iconos/carrito.png" alt="Icono de carrito">
+            </button>
+            <button id="btn-menuUsuario" class="nav-avatar">
+                <img src="img/Iconos/fotoperfil.png" alt="Foto de perfil">
+            </button>
+        </div>
+        <div id="menuHamburguesa" class="menu-hamburguesa menu-oculto">
+            <div>
+                <img src="img/Iconos/Juegos.png" alt="Mis juegos">
+                <h1>Mis Juegos</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Aventuras.png" alt="Acción y Aventuras">
+                <h1>Acción y Aventuras</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Carreras.png" alt="Carreras">
+                <h1>Carreras</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Deportes.png" alt="Deportes">
+                <h1>Deportes</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Multijugador.png" alt="Multijugador">
+                <h1>Multijugador</h1>
+            </div>
+            <div>
+                <img src="img/Iconos/Puzzles.png" alt="Puzzles">
+                <h1>Puzzles</h1>
+            </div>
+        </div>
+        <div id="menuCarrito" class="menu-carrito menu-oculto">
+            <h1>Mi Carrito</h1>
+            <div>
+                <h3>Assassin’s Creed Shadows</h3>
+                <p>19,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>EA FC 25</h3>
+                <p>49,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>Tour de France 2024</h3>
+                <p>45,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>Overwatch 2</h3>
+                <p>30,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>Minecraft</h3>
+                <p>0,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <div>
+                <h3>It Takes Two</h3>
+                <p>20,99 USD</p>
+                <button class="quitarCarrito"><img src="img/Iconos/quitarcarrito.png" alt="Quitar del carrito"></button>
+            </div>
+            <form>
+                <h3>Total a pagar</h3>
+                <p>168,94 USD</p>
+                <button class="agregarCarrito">
+                    <h3>Pagar</h3>
+                </button>
+            </form>
+        </div>
+        <div id="menuUsuario" class="menu-usuario menu-oculto">
+            <div>
+                <img src="img/Iconos/fotoperfil.png" alt="Foto de Perfil">
+                <h2>Mi Perfil</h2>
+            </div>
+            <div>
+                <img src="img/Iconos/Credit card.png" alt="Mis métodos de pago">
+                <h2>Mis métodos de pago</h2>
+            </div>
+            <div>
+                <img src="img/Iconos/Multijugador.png" alt="Amigos">
+                <h2>Amigos</h2>
+            </div>
+            <a href="registrarse.html">
+                <div>
+                    <img src="img/Iconos/Cerrar Sesión.png" alt="Cerrar Sesión">
+                    <h2>Cerrar Sesión</h2>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <main class="main-juego">
+        <div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li>></li>
+                <li><a href="index.html">Puzzles</a></li>
+                <li>></li>
+                <li>Hora de Aventura 4 en Raya</li>
+            </ul>
+        </div>
+        <h1>Hora de Aventura 4 en Raya</h1>
+
+        <section class="juego">
+    
+            <canvas id="juego" width="1000" height="588"></canvas>
+            
+            <aside>
+                <div class="controles">    
+                    <img src="img/controles.png" alt="Controles del juego">
+                    <h2>Controles</h2>
+                    <h3>Haz click y arrastra para mover la ficha</h3>
+                </div>
+                <div class="instrucciones">
+                    <h2>Como ganar</h2>
+                    <h3>Para ganar, solo tienes que alinear cuatro fichas del mismo personaje, ya sea en horizontal, vertical o
+                        diagonal.Solo conecta tus fichas antes que tu oponente y celebra como si hubieras encontrado el corazón
+                        de Ooo.</h3>   
+                </div>    
+            </aside>
+        </section>
+        <section class="informacion-juego">
+            <article class="juego-descripcion">
+                <h2>Descripcion</h2>
+                <h3>¡Sumérgete en el reino de Ooo con el clásico juego de estrategia de “4 en línea”,
+                    pero con el toque mágico de Hora de Aventura!
+                    Este emocionante duelo de ingenio te llevará a enfrentar a tus amigos en una batalla épica
+                    por conectar 4 fichas del mismo color antes que tu oponente.
+                    Ya sea que estés jugando con Finn, Jake o cualquier otro personaje querido, la misión es clara:
+                    ¡conectar cuatro en horizontal, vertical o diagonal para ganar!
+                    Las reglas son simples, pero la diversión es infinita. Cada jugador por turno lanzará una ficha
+                    en las columnas del tablero, y las fichas caerán hasta la posición más baja disponible.
+                    Pero cuidado, ¡tu oponente también está tratando de conectar sus fichas!
+                    Usa tu astucia y bloquea sus movimientos mientras construyes tu camino hacia la victoria.
+                    Espero que estés listo para vivir una aventura épica de estrategia y risas
+                    ¡Enfréntate a tus amigos o desafía al Rey Helado en partidas cargadas de emoción!
+                    ¡Haz clic en el enlace, explora el apartado multimedia y sumérgete en el juego que
+                    te hará sentir como si estuvieras en una misión con tus héroes favoritos de Ooo!</h3>
+                <a href="https://google.com"><img src="img/Iconos/External link.png" alt="Icono link externo">Conocer el mundo de Ooo</a>
+                <div class="calificacion">
+                    <img src="img/Iconos/Estrella Calificacion Llena.png" alt="Estrella llena">
+                    <img src="img/Iconos/Estrella Calificacion Llena.png" alt="Estrella llena">
+                    <img src="img/Iconos/Estrella Calificacion Llena.png" alt="Estrella llena">
+                    <img src="img/Iconos/Estrella Calificacion Llena.png" alt="Estrella llena">
+                    <img src="img/Iconos/Estrella Calificacion.png" alt="Estrella vacia">
+                    <p>Calificaciones: 103</p>
+                </div>
+            </article>
+            <article class="multimedia-juego">
+                <h2>Multimedia</h2>
+                <div>
+                    <img src="img/multimedia1.png" alt="Imagen 1">
+                    <img src="img/multimedia2.png" alt="Imagen 2">
+                    <img src="img/multimedia3.png" alt="Imagen 3">
+                    <img src="img/multimedia4.png" alt="Imagen 4">
+                </div>
+                <aside>
+                    <h3>No te olvides de compartir este juego!</h3>
+                    <img src="img/Iconos/link.png" alt="Logo del Link">
+                    <img class="logo-gmail" src="img/Iconos/gmail.png" alt="Logo de Mail">
+                    <img src="img/Iconos/x.png" alt="Logo x">
+                    <img src="img/Iconos/instagram.png" alt="Logo Instagram">
+                </aside>
+            </article>
+        </section>
+
+
+        <section class="comentarios">
+            <article class="comentarios">
+                <form>
+                    <img src="img/Iconos/fotoperfil.png" alt="">
+                    <div>
+                        <textarea placeholder="Únete a la discusión..." ></textarea>
+                        <button>Comentar</button>
+                    </div>
+                </form>
+                <section class="caja-comentarios">
+                    <article class="comentario">
+                        <img src="img/Avatares/finn.jpg" alt="Avatar de Finn" class="avatar">
+                        <div class="comentario-contenido">
+                            <h4>Finn <span class="fecha">10/03/2024</span></h4>
+                            <p>Quedé totalmente sorprendido con este tremendo juego!!</p>
+                            <div>
+                                <button><img src="img/Iconos/Icono de Like.png" alt="Me gusta"></button>
+                                <span>12</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="comentario">
+                        <img src="img/Avatares/Jake.jpg" alt="Avatar de Jake" class="avatar">
+                        <div class="comentario-contenido">
+                            <h4>Jake <span class="fecha">23/02/2024</span></h4>
+                            <p>Juegazo!!</p>
+                            <div>
+                                <button><img src="img/Iconos/Icono de Like.png" alt="Me gusta"></button>
+                                <span>7</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="comentario">
+                        <img src="img/Avatares/reyhelado.png" alt="Avatar de Rey Helado" class="avatar">
+                        <div class="comentario-contenido">
+                            <h4>Rey Helado <span class="fecha">15/04/2024</span></h4>
+                            <p>Agreguen para jugar!!</p>
+                            <div>
+                                <button><img src="img/Iconos/Icono de Like.png" alt="Me gusta"></button>
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="comentario">
+                        <img src="img/Avatares/dulceprincesa.jpg" alt="Avatar de Dulce Princesa" class="avatar">
+                        <div class="comentario-contenido">
+                            <h4>Dulce Princesa <span class="fecha">27/07/2024</span></h4>
+                            <p>Si quieres ganar fácil, agreguen al rey helado!!</p>
+                            <div>
+                                <button><img src="img/Iconos/Icono de Like.png" alt="Me gusta"></button>
+                                <span>54</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="comentario">
+                        <img src="img/Avatares/maestrosplinter.jpg" alt="Avatar de Tito calderon" class="avatar">
+                        <div class="comentario-contenido">
+                            <h4>Tito calderon <span class="fecha">27/07/2024</span></h4>
+                            <p>Próximo juego a stremear!!</p>
+                            <div>
+                                <button><img src="img/Iconos/Icono de Like.png" alt="Me gusta"></button>
+                                <span>3</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="comentario">
+                        <img src="img/Avatares/Princesagrumosa.jpg" alt="Avatar de Princesa Grumosa" class="avatar">
+                        <div class="comentario-contenido">
+                            <h4>Princesa Grumosa <span class="fecha">02/09/2024</span></h4>
+                            <p>¡Ugh, este juego es grumoso... pero no tanto como yo! ¡Podría ser más fabuloso, sabes!</p>
+                            <div>
+                                <button><img src="img/Iconos/Icono de Like.png" alt="Me gusta"></button>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="comentario">
+                        <img src="img/Avatares/bmo.jpg" alt="Avatar de BMO" class="avatar">
+                        <div class="comentario-contenido">
+                            <h4>BMO <span class="fecha">14/09/2024</span></h4>
+                            <p>Los videojuegos no son solo juegos, ¡son aventuras épicas!</p>
+                            <div>
+                                <button><img src="img/Iconos/Icono de Like.png" alt="Me gusta"></button>
+                                <span>10</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="comentario">
+                        <img src="img/Avatares/limonagrio.jpg" alt="Avatar de Limonagrio" class="avatar">
+                        <div class="comentario-contenido">
+                            <h4>Limonagrio <span class="fecha">16/09/2024</span></h4>
+                            <p>Este juego es INACEPTABLE y quiero un reembolso de ¡¡¡¡¡MI TIEMPOOOOOOOOOOOOOO!!!!!</p>
+                            <div>
+                                <button><img src="img/Iconos/Icono de Like.png" alt="Me gusta"></button>
+                                <span>2</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </article>
+            <aside>
+                <a href=""><img src="img/Publicidad grande.png" alt="Publicidad de camioneta"></a>
+                <a href=""><img src="img/Publicidad chica.png" alt="Publicidad de juegos"></a>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <img src="img/Iconos/bmo.png" alt="Logo Footer">
+        <ul>Desarrolladores
+            <li>Coppini Lautaro</li>
+            <li>Del Valle Matias Ezequiel</li>
+            <li>Ferreiro Zunino Lucas</li>
+        </ul>
+
+        <ul>Categorias
+            <li>Acción y Aventura</li>
+            <li>Carreras</li>
+            <li>Deportes</li>
+            <li>Multijugador</li>
+            <li>Puzzles</li>
+        </ul>
+
+        <ul>Promociones y Ofertas
+            <li>Ofertas del día</li>
+            <li>Cupones y descuentos</li>
+            <li>Sorteos y concursos</li>
+            <li>Packs y bundles de juegos</li>
+        </ul>
+
+        <ul>Soporte
+            <li>Centro de Ayuda</li>
+            <li>FAQs</li>
+            <li>Reportar un problema</li>
+        </ul>
+
+        <ul>Legal y Politicas
+            <li>Condiciones de uso</li>
+            <li>Políticas de Cookies</li>
+            <li>Políticas de privacidad</li>
+            <li>Políticas de reembolso</li>
+            <li>Términos de servicios</li>
+        </ul>
+
+        <ul class="redes">Redes Sociales
+            <div>
+                <li><a href=""><img src="img/Iconos/x.png" alt="Icono de X"></a></li>
+                <li><a href=""><img src="img/Iconos/linkedin.png" alt="Icono de Linkedin"></a></li>
+                <li><a href=""><img src="img/Iconos/instagram.png" alt="Icono de Instagram"></a></li>
+                <li><a href=""><img src="img/Iconos/gmail.png" alt="Icono de Gmail"></a></li>
+            </div>
+        </ul>
+        <p class="derechosRegistrados">© 2024 BMO Games. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/Juego/Tablero.js"></script>
+    <script src="js/Juego/Ficha.js"></script>
+    <script src="js/Juego/juego.js"></script>
+    <script src="js/Juego/Temporizador.js"></script>
+
+</body>
+
+</html>
